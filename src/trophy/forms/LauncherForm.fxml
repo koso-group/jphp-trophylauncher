@@ -1,59 +1,290 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680" prefWidth="1200" styleClass="">
-  <children>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="176" layoutY="56" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="buttonAlt" layoutX="392" layoutY="272" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-buttonAlt" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button3" layoutX="320" layoutY="360" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button3" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button4" layoutX="392" layoutY="136" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button4" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button5" layoutX="32" layoutY="136" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button5" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button6" layoutX="88" layoutY="376" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button6" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button7" layoutX="168" layoutY="208" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button7" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button8" layoutX="232" layoutY="256" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button8" visible="1"/>
-    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button9" layoutX="392" layoutY="232" prefHeight="32" prefWidth="144" styleClass="button " text="Кнопка" textAlignment="CENTER" underline="false" wrapText="false">
-      <font>
-        <Font name="System Regular" size="12"/>
-      </font>
-    </Button>
-    <Data cursor="DEFAULT" enabled="1" id="data-button9" visible="1"/>
-  </children>
-</AnchorPane>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="rootBox" alignment="CENTER" prefHeight="720.0" prefWidth="1200.0" style="-fx-border-radius: 4 4 0 0; -fx-border-width: 1px; -fx-border-color: rgb(0, 133, 66); -fx-background-radius: 4 4 0 0;" styleClass="root-pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox id="hBoxTitleUI" alignment="CENTER" spacing="20.0">
+         <children>
+            <VBox id="accountChoiceContainer"/>
+            <HBox id="hBoxTitleCaptionUI" alignment="CENTER" prefWidth="200.0" spacing="4.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text id="titleCaptionUI" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Trophy Launcher">
+                     <font>
+                        <Font name="Candara Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox id="hBoxButtonsUI" alignment="TOP_RIGHT" spacing="6.0">
+               <padding>
+                  <Insets left="16.0" right="16.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="16.0" />
+         </padding>
+      </HBox>
+      <TabPane id="tabPaneMain" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+         <tabs>
+            <Tab id="tabPlay" text="ИГРАТЬ">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-image: url(.data/img/background.jpg); -fx-background-position: center center;" styleClass="content-pane">
+                     <children>
+                        <VBox id="vBoxPlayScreen" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                        <HBox id="hBoxPlay" alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Button id="buttonPlay" focusTraversable="false" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" text="ИГРАТЬ">
+                                 <font>
+                                    <Font name="Candara Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox id="choiceInstall" focusTraversable="false" prefHeight="48.0" prefWidth="250.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab id="tabSkinsCloaks" text="БИБЛИОТЕКА СКИНОВ">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="content-pane">
+                     <children>
+                        <Text id="textSettingsLanguage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMING SOON ///">
+                           <font>
+                              <Font name="Candara Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab id="tabSettings" text="НАСТРОЙКИ">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TabPane id="tabPaneSettings" prefHeight="200.0" prefWidth="200.0" styleClass="content-pane" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                           <tabs>
+                              <Tab id="tabSettingsMain" text="ОСНОВНОЕ">
+                                 <content>
+                                    <VBox id="vBoxSettingsMain" prefHeight="200.0" prefWidth="100.0" spacing="30.0" styleClass="content-pane">
+                                       <children>
+                                          <HBox id="hBoxSettingsMain" spacing="30.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox id="vBoxSettings1" spacing="30.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox id="vBoxSettingsLanguage" spacing="4.0">
+                                                         <children>
+                                                            <Text id="textSettingsLanguage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ЯЗЫК">
+                                                               <font>
+                                                                  <Font name="Candara Bold" size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <ChoiceBox id="choiceLanguage" focusTraversable="false" prefHeight="27.0" prefWidth="280.0" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox id="vBoxSettingsLauncher" spacing="4.0">
+                                                         <children>
+                                                            <Text id="textSettingsLauncher" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="НАСТРОЙКИ ЛАУНЧЕРА">
+                                                               <font>
+                                                                  <Font name="Candara Bold" size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <CheckBox id="checkLauncherClose" focusTraversable="false" mnemonicParsing="false" selected="true" text="Не закрывать лаунчер после запуска игры" />
+                                                            <CheckBox id="checkLauncherClose" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Использовать BETA // RC версии лаунчера (возможны сбои в работе)" />
+                                                            <CheckBox id="checkLauncherClose" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Включить анимацию интерфейса (beta)" />
+                                                            <CheckBox id="checkUseCustomGameFolder" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Назначить свою директорию для файлов игры" />
+                                                            <HBox alignment="CENTER" spacing="4.0">
+                                                               <children>
+                                                                  <TextField id="fieldGamePath" focusTraversable="false" HBox.hgrow="ALWAYS" />
+                                                                  <Button id="buttonGamePathSelect" defaultButton="true" focusTraversable="false" mnemonicParsing="false" text="..." />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" spacing="4.0">
+                                                               <children>
+                                                                  <Button id="buttonGameFolderClear" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ОТКРЫТЬ ПАПКУ ИГРЫ" HBox.hgrow="ALWAYS">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Button>
+                                                                  <Button id="buttonGameFolderClear" defaultButton="true" focusTraversable="false" mnemonicParsing="false" text="ОЧИСТИТЬ ПАПКУ" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox id="vBoxSettings2" spacing="30.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox id="vBoxSettingsJava" spacing="4.0">
+                                                         <children>
+                                                            <Text id="texSettingsJava" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="НАСТРОЙКИ JAVA">
+                                                               <font>
+                                                                  <Font name="Candara Bold" size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <CheckBox id="checkUseJavaPath" indeterminate="true" mnemonicParsing="false" text="Использовать стороннюю JAVA (рекомендуется):" />
+                                                            <HBox id="hBoxSettingsJavaPath" spacing="4.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField id="fieldJavaPath" focusTraversable="false" HBox.hgrow="ALWAYS" />
+                                                                  <Button mnemonicParsing="false" text="ПРОВЕРКА">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Button>
+                                                                  <Button id="buttonJavaPathSelect" defaultButton="true" focusTraversable="false" mnemonicParsing="false" text="..." />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox id="hBoxSettingsJavaMemory" alignment="CENTER" spacing="4.0">
+                                                               <children>
+                                                                  <CheckBox id="checkUseJavaMemory" indeterminate="true" mnemonicParsing="false" text="Выделение памяти:" />
+                                                                  <TextField id="fieldJavaMemoryMin" focusTraversable="false" HBox.hgrow="ALWAYS" />
+                                                                  <TextField id="fieldJavaMemoryMax" focusTraversable="false" HBox.hgrow="ALWAYS" />
+                                                                  <Button id="buttonJavaMemorySelect" defaultButton="true" focusTraversable="false" mnemonicParsing="false" text="..." />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox id="vBoxSettingsMinecraft" spacing="4.0">
+                                                         <children>
+                                                            <Text id="textSettingsMinecraft" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="НАСТРОЙКИ MINECRAFT: JAVA EDITION">
+                                                               <font>
+                                                                  <Font name="Candara Bold" size="14.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <CheckBox id="checkMinecraftStream" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Открывать журнал при запуске Minecraft: Java Edition" />
+                                                            <CheckBox id="checkMinecraftVersionOldAlpha" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Показывать версии OLD_ALPHA" />
+                                                            <CheckBox id="checkMinecraftVersionSnapshot" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Показывать версии SNAPSHOT" />
+                                                            <CheckBox id="checkMinecraftVersionMinetrophy" focusTraversable="false" indeterminate="true" mnemonicParsing="false" text="Показывать версии Minetrophy" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </Tab>
+                              <Tab id="tabSettingsAccount" text="УЧЕТНЫЕ ЗАПИСИ">
+                                 <content>
+                                    <VBox id="vBoxSettingsAccounts" prefHeight="200.0" prefWidth="100.0" styleClass="content-pane">
+                                       <children>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                                   <children>
+                                                      <Button id="buttonLocalAccountFormShow" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ДОБАВИТЬ ЛОКАЛЬНЫЙ АККАУНТ">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Hyperlink text="Добавить аккаунт Minetrophy (beta)" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <VBox id="vBoxLocalAccountAdd" styleClass="root-pane">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" spacing="4.0">
+                                                         <children>
+                                                            <TextField id="fieldJavaPath" focusTraversable="false" prefWidth="200.0" promptText="Имя персонажа" />
+                                                            <Button id="buttonLocalAccountAdd" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ДОБАВИТЬ">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button id="buttonLocalAccountFormHide" defaultButton="true" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ОТМЕНА">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="14.0" left="30.0" right="30.0" top="14.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <ListView id="listAccounts" styleClass="content-pane" VBox.vgrow="ALWAYS" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </Tab>
+                              <Tab id="tabSettingsAbout" text="О ПРОГРАММЕ">
+                                 <content>
+                                    <VBox id="vBoxSettingsAbout" prefHeight="200.0" prefWidth="100.0" styleClass="content-pane">
+                                       <children>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+                                             <content>
+                                                <VBox id="vBoxAboutContainer" spacing="20.0" styleClass="content-pane">
+                                                   <padding>
+                                                      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <HBox id="hBoxProgress" alignment="CENTER" spacing="10.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <ProgressBar id="progressDownload" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="1180.0" progress="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label id="labelProgressStatus" alignment="CENTER" layoutX="25.0" layoutY="8.0" text="STATUS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Candara Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</VBox>

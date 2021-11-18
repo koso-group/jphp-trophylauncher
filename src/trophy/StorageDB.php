@@ -1,27 +1,27 @@
 <?php
 namespace trophy;
 
+use bundle\sql\SqliteClient;
+use bundle\sql\SqliteStorage;
+use trophy;
 use std, gui, framework;
 
-class StorageDB extends Storage
+class StorageDB
 {
+    private static $STORAGE = null;
+    public static function Install()
+    {
     
 
-
-    public function Install()
-    {
-        static::$STORAGE = SqlDriverManager::getConnection('sqlite:storage.db');
-
-        $us = $conn->query('SELECT * FROM user where id = 1')->fetch();
-        $user = $us->toArray();
-        $conn->close();
-        $this->toast('Персонаж не найден!',5000);
-
-        $query = $this->database->query("SELECT * FROM `user` WHERE `name`='".$name."'");
-        $info = $query->fetch();
+        
     }
 
-    public static function Push() {}
+    public static function ResolveAll($table, $default)
+    {
+        $result = static::$STORAGE->query("SELECT * FROM {$table} LIMIT 100");
+
+        var_dump($result->fetchAll());
+    }
 }
 
 

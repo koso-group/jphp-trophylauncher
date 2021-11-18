@@ -3,6 +3,7 @@ namespace trophy\control;
 
 use std, gui, framework, trophy;
 
+use trophy\forms\Dialog_AccountManager;
 
 use trophy\dto\AccountDTO;
 
@@ -18,12 +19,17 @@ class UXAccountChoice extends UXMenuButton
         $this->_placeholder = $palceholder;
 
         $this->text = $this->_placeholder;
+        $this->width = 260;
 
 
-        $this->_itemAccountManager = new UXMenuItem("Account Manager");
-        $this->_itemAccountManager->graphic = new UXImageView(IconFactory::ResolveIcon("sett"));
+        $this->_itemAccountManager = new UXMenuItem(Lang::T("account-manager"));
+        $this->_itemAccountManager->graphic = new UXImageView(AssetFactory::ResolveIcon("sett"));
 
-        $this->_itemAccountManager->on('action', function () {});
+        $this->_itemAccountManager->on('action', function ()
+        {
+
+            DialogManager::ShowL0(new Dialog_AccountManager());
+        });
 
         $this->clearAccounts();
     }
@@ -38,7 +44,7 @@ class UXAccountChoice extends UXMenuButton
         
 
         $this->items->add($this->_itemAccountManager);
-        $this->items->add(new UXMenuItem("Logout"));
+        //$this->items->add(new UXMenuItem("Logout"));
 
     }
 

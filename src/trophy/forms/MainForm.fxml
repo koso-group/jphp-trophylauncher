@@ -2,8 +2,10 @@
 <?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728" prefWidth="1248" styleClass="">
   <children>
     <FragmentPane alignment="CENTER" focusTraversable="false" id="fragmentWindow" layoutX="24" layoutY="24" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="680" prefWidth="1200" spacing="0" styleClass="fragment-pane "/>
-    <Data content="TestForm" cursor="DEFAULT" enabled="1" id="data-fragmentWindow" visible="1"/>
-    <FragmentPane alignment="CENTER" focusTraversable="false" id="fragmentDialog" layoutX="24" layoutY="24" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="680" prefWidth="1200" spacing="0" styleClass="fragment-pane "/>
-    <Data content="Dialog_InstallationManger" cursor="DEFAULT" enabled="" id="data-fragmentDialog" visible=""/>
+    <Data content="LauncherForm" cursor="DEFAULT" enabled="1" id="data-fragmentWindow" visible="1"/>
+    <FragmentPane alignment="CENTER" focusTraversable="false" id="fragmentDialog_L0" layoutX="24" layoutY="24" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="680" prefWidth="1200" spacing="0" styleClass="fragment-pane "/>
+    <Data content="Dialog_InstallationManger" cursor="DEFAULT" enabled="1" id="data-fragmentDialog_L0" visible="1"/>
+    <FragmentPane alignment="CENTER" focusTraversable="false" id="fragmentDialog_L1" layoutX="24" layoutY="24" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="680" prefWidth="1200" spacing="0" styleClass="fragment-pane "/>
+    <Data content="" cursor="DEFAULT" enabled="" id="data-fragmentDialog_L1" visible=""/>
   </children>
 </AnchorPane>

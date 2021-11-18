@@ -3,8 +3,7 @@ namespace trophy\control;
 
 use std, gui, framework, trophy;
 
-
-use trophy\dto\AccountDTO;
+use trophy\dto\MinecraftInstallationDTO;
 
 
 class UXInstallationsView extends UXScrollPane
@@ -30,9 +29,9 @@ class UXInstallationsView extends UXScrollPane
         $this->content = $this->_vBoxContent;
     }
 
-    public function addInstallation($installation)
+    public function addInstallation(MinecraftInstallationDTO $minecraftInstallation)
     {
-        $item = new UXInstallationsViewItem();
+        $item = new UXInstallationsViewItem($minecraftInstallation);
         //UXVBox::setVgrow($item, 'ALWAYS');
         $this->_vBoxContent->add($item);
     }

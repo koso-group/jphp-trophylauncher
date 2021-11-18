@@ -3,9 +3,10 @@ namespace trophy;
 
 use std, gui, framework;
 
-class IconFactory
+class AssetFactory
 {
     public static $ICONS = NULL;
+    public static $IMAGES = NULL;
 
     public static function ResolveIcon($iconName)
     {
@@ -13,5 +14,13 @@ class IconFactory
             static::$ICONS[$iconName] = new UXImage("res://.data/icons/{$iconName}.png");
 
         return static::$ICONS[$iconName];
+    }
+
+    public static function ResolveImage($imageName)
+    {
+        if(!isset(static::$IMAGES[$imageName])) 
+            static::$IMAGES[$imageName] = new UXImage("res://.data/img/{$imageName}.png");
+
+        return static::$IMAGES[$imageName];
     }
 }

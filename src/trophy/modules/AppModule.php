@@ -1,6 +1,7 @@
 <?php
 namespace trophy\modules;
 
+use bundle\sql\SqlStorage;
 use std, gui, framework, trophy;
 
 
@@ -17,8 +18,9 @@ class AppModule extends AbstractModule
         //configuration-deploy
         //Storage::Install();
         //StorageDB::Install();
+        Lang::Install();
 
 
-        
+       
     }
 }
